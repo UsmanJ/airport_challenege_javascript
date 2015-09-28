@@ -4,7 +4,7 @@ describe("Plane", function() {
 
   beforeEach(function() {
     plane = new Plane();
-    // song = new Song();
+    airport = new Airport();
   });
 
   it("should be flying to start with", function() {
@@ -15,4 +15,10 @@ describe("Plane", function() {
     plane.land();
     expect(plane.isFlying).toBe(false)
   });
+
+  it("should be flying after take off", function() {
+    plane.land();
+    plane.take_off();
+    expect(plane.isFlying).toBe(true)
+  })
 });

@@ -3,15 +3,22 @@ describe("Player", function() {
   var airport;
 
   beforeEach(function() {
-    player = new Player();
-    song = new Song();
+    plane = new Plane();
+    airport = new Airport();
   });
 
-  it("should be able to play a Song", function() {
-    player.play(song);
-    expect(player.currentlyPlayingSong).toEqual(song);
+  it("should be empty to start off with", function() {
+    expect(airport.isEmpty).toBe(true);
+  });
 
-    //demonstrates use of custom matcher
-    expect(player).toBePlaying(song);
+  it("can instruct a plane to take off", function() {
+    airport.hanger.push(plane)
+    airport.take_off(plane)
+    expect(airport.hanger.length).toEqual(0)
+  });
+
+  it("can instruct a plane to land", function() {
+    airport.land(plane)
+    expect(airport.hanger.length).toEqual(1)
   });
 });
