@@ -1,4 +1,4 @@
-describe("Player", function() {
+describe("Airport", function() {
   var plane;
   var airport;
 
