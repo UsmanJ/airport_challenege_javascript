@@ -21,4 +21,17 @@ describe("Airport", function() {
     airport.land(plane)
     expect(airport.hanger.length).toEqual(1)
   });
+
+  it("can not land plane when full", function() {
+    airport.land(plane)
+    airport.land(plane)
+    airport.land(plane)
+    expect(function() {airport.land(plane);
+    }).toThrowError("Airport is full.");
+  });
+
+  it(" can not relsease plane when empty", function() {
+    expect(function() {airport.take_off(plane);
+    }).toThrowError("No planes available.");
+  });
 });
