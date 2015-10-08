@@ -34,4 +34,11 @@ describe("Airport", function() {
     expect(function() {airport.take_off(plane);
     }).toThrowError("No planes available.");
   });
+
+  it("should reduce plane in array when plane takes off", function () {
+    airport.land(plane);
+    airport.land(plane);
+    airport.take_off(plane);
+    expect(airport.hanger.length).toEqual(1);
+  });
 });

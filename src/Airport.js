@@ -1,7 +1,6 @@
 function Airport() {
     this.hanger = []
     this.defaultCapacity = 3;
-    // this.weather = ['stormy', 'sunny']
     this.isEmpty = true;
 };
 
