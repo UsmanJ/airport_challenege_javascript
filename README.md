@@ -25,9 +25,7 @@ The airport control system is not fully funtioning as it is missing the weather 
 Tests passing using Jasmine
 ---------------------------------
 ```
-12 specs, 0 failures
-
-Plane
+Plane -
 should be flying to start with
 should not be flying when landed
 should be flying after take off
@@ -35,11 +33,11 @@ should not be landed after take off
 should raise error if trying to take off whilst flying
 should raise error if trying to land whilst landed
 
-Airport
+Airport -
 should be empty to start off with
 can instruct a plane to take off
 can instruct a plane to land
-can not land plane when full
-can not relsease plane when empty
+can not land plane when full and returns error
+should return error if relseasing plane when airport is empty
 should reduce plane in array when plane takes off
 ```
