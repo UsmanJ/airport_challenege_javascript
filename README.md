@@ -1,1 +1,1 @@
-# Airport Challenege in JavaScript
+# Airport Challenge in JavaScript
